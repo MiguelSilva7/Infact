@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
+  font-family: archivo, sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+.main-template {
+  grid-template-areas:
+    "a a"
+    "b c";
+}
+
+.md-auth-template {
+  grid-template-areas:
+    "a a"
+    "b d"
+    "c d";
+}
+
+.auth-template {
+  grid-template-areas:
+    "a a"
+    "d d"
+    "b c";
+}
+
+.grid-a {
+  grid-area: "a";
+}
+
+.grid-b {
+  grid-area: "b";
+}
+
+.grid-c {
+  grid-area: "c";
+}
+
+.grid-d {
+  grid-area: "d";
+}
+
+@font-face {
+  font-family: "minerva";
+  src: url("../assets/minerva.ttf");
+}
+@layer components {
+  .neobrutalism {
+    @apply shadow-neobrutalism rounded-lg border-4 border-black transition-transform duration-200;
+  }
+  .neobrutalism-hover {
+    @apply hover:shadow-neobrutalismHover hover:-translate-x-[3px] hover:-translate-y-[3px];
+  }
+  .small-neobrutalism {
+    @apply shadow-smallNeobrutalism rounded-lg border-2 border-black transition-all duration-200;
+  }
+  .small-neobrutalism-hover {
+    @apply hover:shadow-smallNeobrutalismHover hover:-translate-x-[2px] hover:-translate-y-[2px];
+  }
+}
